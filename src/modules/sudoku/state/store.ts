@@ -65,9 +65,7 @@ export const store = createStore({
 			})
 		},
 
-		setValue: (ctx, evt: { number: number }, enqueue) => {
-			// todo: enqueue.emit('check')
-
+		setValue: (ctx, evt: { number: number }) => {
 			return create(ctx, (d) => {
 				if (d2.get(d.start, ctx.selected) !== 0) {
 					return

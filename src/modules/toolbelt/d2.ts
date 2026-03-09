@@ -35,7 +35,7 @@ interface RectIterator<T> {
 	[Symbol.iterator](): Generator<[T, Position], void, unknown>
 }
 
-export function* rect<T>(arr: Array<T>, [rx, ry, rw, rh]: Rect, fn?: (val: T, pos: Position) => void): RectIterator<T> {
+export function* rect<T>(arr: Array<T>, [rx, ry, rw, rh]: Rect): RectIterator<T> {
 	for (let y = ry; y < ry + rh; y++) {
 		for (let x = rx; x < rx + rw; x++) {
 			yield [arr[y][x], [x, y]] as const
@@ -47,7 +47,7 @@ interface RowIterator<T> {
 	[Symbol.iterator](): Generator<[T, Position], void, unknown>
 }
 
-export function* row<T>(arr: Array<T>, y: number, fn?: (val: T, pos: Position) => void): RowIterator<T> {
+export function* row<T>(arr: Array<T>, y: number): RowIterator<T> {
 	for (let x = 0; x < arr[y].length; x++) {
 		yield [arr[y][x], [x, y]] as const
 	}
@@ -57,7 +57,7 @@ interface ColumnIterator<T> {
 	[Symbol.iterator](): Generator<[T, Position], void, unknown>
 }
 
-export function* column<T>(arr: Array<T>, x: number, fn?: (val: T, pos: Position) => void): ColumnIterator<T> {
+export function* column<T>(arr: Array<T>, x: number): ColumnIterator<T> {
 	for (let y = 0; y < arr[x].length; y++) {
 		yield [arr[y][x], [x, y]] as const
 	}
