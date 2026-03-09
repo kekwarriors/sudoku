@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+body {
+	font-family: Inter;
+}
+
+.mode-numbers {
+	--neighbor-color: var(--color-slate-100);
+	--selected-color: var(--color-slate-200);
+}
+
+.mode-hints {
+	--neighbor-color: var(--color-yellow-50);
+	--selected-color: var(--color-yellow-100);
+}

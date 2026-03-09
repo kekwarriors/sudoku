@@ -1,0 +1,24 @@
+- [x] make board
+    - [ ] implement using flat array
+- [x] select, fill
+- [x] validtion, highlight errors
+    - [x] row
+    - [x] col
+    - [x] rect
+- [ ] persistence
+- [x] check solution
+    - [ ] generator sometimes create boards with a lot of clues
+- [ ] UI
+    - [x] colored numbers
+    - [x] dim not current numbers
+    - [ ] fix numbers
+    - [ ] better numpad (show fillingness of a number)
+    - [ ] better checkbox UI
+    - [ ] use SVG for the board
+- [x] keyboard navigation
+    - [ ] prevent keyboard from checkboxes
+- [x] corner hints
+- [x] implement solver and generator sudoku
+- [ ] difficulty levels
+- [ ] undo / redo
+- [ ] timer
